@@ -1,28 +1,29 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 int gcd(int &m, int &n)
 {
-	int g=0; int gcd1;
+	int g = 0; int gcd1; int a = m; int b = n;
 
-	if (m < n)
+	if (a < b)
 	{
-		g = m; m = n; n= g;
+		g = a; a = b; b= g;
 	}
 
-	while (n != 0)
+	while (b!= 0)
 	{
-		g = m % n;
-		m = n;
-		n = g;
+		g = a % b;
+		a = b;
+		b = g;
 
 	}
-	 gcd1 = m;
+	 gcd1 = a;
 	
 	return gcd1;
 }
-int icm(int& m, int& n)
+int icm(int &m, int &n)
 {
-	return	(m * n) / gcd(m, n);
+	int t = (m * n) / gcd(m, n);
+	return  t	;
 }
 int main()
 {
