@@ -1,0 +1,1 @@
+#include<iostream>#include "502.h"using namespace std;int main(){	Student stud;                //定义对象	stud.set_value(007, "tcg", " man");	stud.display();              //执行stud对象的display函数	return 0;}
